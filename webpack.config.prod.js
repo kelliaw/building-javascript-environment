@@ -12,12 +12,12 @@ export default {
   output: {
     path: path.resolve(__dirname, "dist"),
     publicPath: "/",
-    filename: "[name].[chunkhash]",
+    filename: "[name].[chunkhash].js",
   },
   plugins: [
     // Generate an external css file with a hash in the filename
     new MiniCssExtractPlugin({
-      filename: "src/index.css",
+      filename: "[name].[chunkhash].css",
     }),
 
     // Create HTML file that includes reference to bundled JS.
