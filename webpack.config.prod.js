@@ -1,5 +1,5 @@
 import path from "path";
-import HtmlWebpackPlugin from "html-webpack-plugin";
+import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
 
 export default {
@@ -12,7 +12,7 @@ export default {
   output: {
     path: path.resolve(__dirname, "dist"),
     publicPath: "/",
-    filename: "[name].",
+    filename: "[name].[chunkhash]",
   },
   plugins: [
     // Generate an external css file with a hash in the filename
